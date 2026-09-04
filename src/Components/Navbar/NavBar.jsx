@@ -10,7 +10,7 @@ const NavBar = () => {
   { name: "Settings", path: "/settings" },
 ];
   return (
-    <div className="max-w-7xl mx-auto border p-4 flex justify-between items-center">
+    <div className="max-w-7xl mx-auto  p-4 flex justify-between items-center">
       <p className="text-xl font-bold">CS-Ticket-System</p>
       <ul className="flex gap-4">
         {menuBar.map((item) => (
