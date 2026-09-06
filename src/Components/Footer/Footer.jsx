@@ -32,16 +32,16 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="max-w-7xl mx-auto px-20 pt-20 pb-6 text-white">
+    <div className="max-w-7xl mx-auto  pt-20 pb-6 text-white">
       <div className="grid grid-cols-5 gap-4 border-b pb-20">
         {footerServive.map((item) => (
           <div>
-            <p>{item.servie}</p>
+            <p className="font-bold text-2xl">{item.servie}</p>
             <div className="mt-4">
               {item.serviceName.map((service, index) => (
                 <div key={index} className="mt-4 flex items-center gap-2">
                   {item.icon?.[index]}
-                  <p>{service}</p>
+                  <p className="text-base text-[#A1A1AA]">{service}</p>
                 </div>
               ))}
             </div>
