@@ -5,7 +5,7 @@ const Footer = () => {
     {
       servie: "CS — Ticket System",
       serviceName: [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "CS — Ticket System is a customer support management platform designed to help businesses efficiently manage customer requests, track support tickets, monitor agent performance, and resolve issues faster. Our goal is to make customer support simple, organized, and transparent for both customers and support teams.",
       ],
     },
     {
@@ -26,14 +26,14 @@ const Footer = () => {
         "@CS — Ticket System",
         "@CS — Ticket System",
         "@CS — Ticket System",
-        "nomanjahan866615@gmail.com",
+        
       ],
       icon: [<Twitter />, <LinkdIn />, <Facebook />, <Email />],
     },
   ];
   return (
     <div className="max-w-7xl mx-auto px-20 pt-20 pb-6 text-white">
-      <div className="grid grid-cols-5 gap-4 ">
+      <div className="grid grid-cols-5 gap-4 border-b pb-20">
         {footerServive.map((item) => (
           <div>
             <p>{item.servie}</p>
@@ -48,7 +48,9 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div>p6</div>
+      <div>
+        <p className="text-center py-7">© 2026 CS — Ticket System. All rights reserved.</p>
+      </div>
     </div>
   );
 };
