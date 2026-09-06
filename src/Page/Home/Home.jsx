@@ -3,6 +3,7 @@ import NavBar from "../../Components/Navbar/NavBar";
 import Banner from "../../Components/Share/Banner";
 import Ticket from "../../Components/Ticket/Ticket";
 import { Suspense } from "react";
+import Footer from "../../Components/Footer/Footer";
 
 const response = axios.get("/order.json");
 const Home = () => {
@@ -17,6 +18,9 @@ const Home = () => {
         <Suspense fallback={<span className="loading loading-ball loading-xl"></span>}>
           <Ticket data={response} />
         </Suspense>
+      </div>
+      <div className="border bg-black">
+        <Footer/>
       </div>
     </div>
   );
