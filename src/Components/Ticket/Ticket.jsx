@@ -17,11 +17,12 @@ const Ticket = ({ data, setProgress,setResolved }) => {
   const clickData = (item) => {
     if (item) {
       Swal.fire({
-        position: "top-end",
+        position: "center",
         icon: "success",
+        width:300,
         title: "In-progress",
         showConfirmButton: false,
-        timer: 1500,
+        timer: 1000,
       });
     }
     const newData = [...ticketStatusData, item];
