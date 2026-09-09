@@ -7,6 +7,7 @@ import Twitter from './Icon/twitter.svg?react';
 import Facebook from './Icon/Facebook.svg?react';
 import LinkdIn from './Icon/LinkdIn.svg?react';
 import Email from './Icon/Email.svg?react';
+import CorrectICon from './Icon/CorrectIcon.svg?react';
 
 
 // export in image 
@@ -15,4 +16,4 @@ export{backgroundImage}
 //export in svg
 
 
-export{DateIcon,Twitter,Facebook,LinkdIn,Email}
+export{DateIcon,Twitter,Facebook,LinkdIn,Email,CorrectICon}

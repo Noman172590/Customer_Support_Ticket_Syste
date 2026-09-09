@@ -1,5 +1,5 @@
 import { use, useEffect, useState } from "react";
-import { DateIcon } from "../../assets";
+import { CorrectICon, DateIcon } from "../../assets";
 import Swal from "sweetalert2";
 
 const sameClass = "text-[#627382] text-base";
@@ -47,7 +47,14 @@ const Ticket = ({ data, setProgress, setResolved }) => {
     setTicketStatusData((prev) =>
       prev.filter((ticket) => ticket.id !== item.id),
     );
-
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      width: 300,
+      title: "Complete",
+      showConfirmButton: false,
+      timer: 1000,
+    });
     // Remove from Customer Tickets
     setCustomerTickets((prev) =>
       prev.filter((ticket) => ticket.id !== item.id),
@@ -161,9 +168,9 @@ const Ticket = ({ data, setProgress, setResolved }) => {
             </p>
 
             {ticketSolvedStatus.map((item) => (
-              <div key={item.id} className="shadow-2xl mt-10">
+              <div key={item.id} className="shadow-2xl mt-10 p-2">
                 <p>{item.title}</p>
-                <p>complete</p>
+                <p className="flex items-center gap-1 mt-2 text-green-400"><CorrectICon/>Complete</p>
               </div>
             ))}
           </div>
