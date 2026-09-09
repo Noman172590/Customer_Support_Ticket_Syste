@@ -1,9 +1,8 @@
-import React from "react";
 import { backgroundImage } from "../../assets";
 
 const Banner = ({InProgress="In-Progress",number=0,backgroundColor = "linear-gradient(to right, #422AD5, #9B5DEB)",}) => {
   return (
-    <div style={{ background: backgroundColor }} className={`relative w-full overflow-hidden rounded  py-16`}>
+    <div style={{ background: backgroundColor }} className={`relative w-full overflow-hidden rounded  py-16 my-2 md:my-0`}>
       {/* Left Background Image */}
       <div
         className="absolute inset-y-0 left-0 w-1/2 bg-no-repeat bg-left"

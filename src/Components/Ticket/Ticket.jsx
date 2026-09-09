@@ -2,7 +2,7 @@ import { use, useEffect, useState } from "react";
 import { CorrectICon, DateIcon } from "../../assets";
 import Swal from "sweetalert2";
 
-const sameClass = "text-[#627382] text-base";
+const sameClass = "text-[#627382] text-xs md:text-base";
 
 const priorityColor = {
   HIGH: "text-[#F83044]",
@@ -75,15 +75,15 @@ const Ticket = ({ data, setProgress, setResolved }) => {
   }, [ticketSolvedStatus, setResolved]);
 
   return (
-    <div className="max-w-7xl mx-auto py-20">
-      <div className="grid grid-cols-[minmax(0,1fr)_358px] gap-8">
+    <div className="max-w-7xl mx-auto px-2 md:py-20">
+      <div className="grid md:grid-cols-[minmax(0,1fr)_358px] gap-8">
         {/* Customer Tickets */}
         <div>
           <p className="mb-4 text-[#34485A] font-semibold text-2xl">
             Customer Tickets
           </p>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {customerTickets.map((item) => (
               <div
                 key={item.id}
@@ -104,7 +104,7 @@ const Ticket = ({ data, setProgress, setResolved }) => {
                       }`}
                     ></div>
 
-                    <div>{item.status}</div>
+                    <div className="text-xs md:text-base">{item.status}</div>
                   </div>
                 </div>
 
@@ -114,7 +114,7 @@ const Ticket = ({ data, setProgress, setResolved }) => {
                   <div className="flex gap-2">
                     <p className={sameClass}>#{item.id}</p>
 
-                    <p className={priorityColor[item.priority]}>
+                    <p className={`${priorityColor[item.priority]} text-xs md:text-base`}>
                       {item.priority} PRIORITY
                     </p>
                   </div>
@@ -122,7 +122,7 @@ const Ticket = ({ data, setProgress, setResolved }) => {
                   <div className="flex gap-2">
                     <p className={sameClass}>{item.customer}</p>
 
-                    <div className="flex gap-2 text-[#627382]">
+                    <div className="flex gap-2 text-[#627382] text-xs md:text-base">
                       <DateIcon />
                       {item.date}
                     </div>

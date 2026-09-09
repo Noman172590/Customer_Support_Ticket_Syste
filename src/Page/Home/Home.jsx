@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div>
       <NavBar />
-      <div className="max-w-7xl mx-auto  flex gap-6 ">
+      <div className="max-w-7xl mx-auto   md:flex gap-6 ">
         <Banner number={progress} />
         <Banner number={resolved} InProgress="Resolved" backgroundColor="#0D8E77" />
       </div>

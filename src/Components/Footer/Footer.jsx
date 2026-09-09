@@ -32,16 +32,16 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="max-w-7xl mx-auto  pt-20 pb-6 text-white">
-      <div className="grid grid-cols-5 gap-4 border-b pb-20">
+    <div className="max-w-7xl mx-auto p-2 md:pt-20 md:pb-6 text-white">
+      <div className="grid md:grid-cols-5 gap-4 border-b pb-20">
         {footerServive.map((item) => (
           <div>
-            <p className="font-bold text-2xl">{item.servie}</p>
+            <p className="font-bold  text-lg md:text-2xl">{item.servie}</p>
             <div className="mt-4">
               {item.serviceName.map((service, index) => (
-                <div key={index} className="mt-4 flex items-center gap-2">
+                <div key={index} className="mt-4 md:flex items-center gap-2">
                   {item.icon?.[index]}
-                  <p className="text-base text-[#A1A1AA]">{service}</p>
+                  <p className="text-xs md:text-base text-[#A1A1AA]">{service}</p>
                 </div>
               ))}
             </div>
@@ -49,7 +49,7 @@ const Footer = () => {
         ))}
       </div>
       <div>
-        <p className="text-center py-7">© 2026 CS — Ticket System. All rights reserved.</p>
+        <p className="md:text-center text-2xl py-7">© 2026 CS — Ticket System. All rights reserved.</p>
       </div>
     </div>
   );
